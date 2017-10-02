@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/treinamento-angular4-solutis.iml" filepath="$PROJECT_DIR$/treinamento-angular4-solutis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/treinamento-angular4-solutis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/treinamento-angular4-solutis_main.iml" group="treinamento-angular4-solutis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/treinamento-angular4-solutis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/treinamento-angular4-solutis_test.iml" group="treinamento-angular4-solutis" />
+    </modules>
+  </component>
+</project>
