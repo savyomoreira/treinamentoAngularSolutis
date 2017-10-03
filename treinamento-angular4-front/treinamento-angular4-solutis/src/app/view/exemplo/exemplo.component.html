@@ -1,0 +1,67 @@
+
+<div class="content-wrap" >
+    <div class="content">
+        
+                        <div class="centralizar box">
+                        <legend>Form name</legend>
+                      <div class="row">
+                        <span class="col-md-6 form-group">
+                            <label>Campo 1<span style="color: red">*</span></label>
+                            <input [(ngModel)] = "unidade.endereco" maxlength="200" name="unidade-endereco" class="form-control" [disabled]="!isEditable" />
+                        </span>
+    
+                        <span class="col-md-6 form-group">
+                            <label>Campo 2<span style="color: red">*</span></label>
+                            <input  maxlength="50"  name="unidade-bairro" class="form-control"  />
+                         </span>
+    
+                        <span class="col-md-6 form-group">
+                            <label>Campo 3</label>
+                             <input  maxlength="50"  name="unidade-bairro" class="form-control"  />
+                        </span>
+    
+                         <span class="col-md-6 form-group">
+                            <label>Campo 4</label>
+                            <input  maxlength="50"  name="unidade-bairro" class="form-control"  />						
+                         </span>
+                         
+                      </div>
+                          <legend>Table</legend>
+        <div class="row">
+            <span class="col-md-12 form-group">
+                                
+                                <a  title="Adicionar" class="btn btn-blue btn-ball pull-right"><span class="fa fa-plus"></span> Adicionar</a>
+            <table class="table table-hover table-striped sem-margin">
+                <thead>
+                    <tr>
+                        <th>col 1</th>
+                        <th>col 2</th>
+                        <th>col 3</th>
+                        <th>col 4</th>
+                        <th class="text-right">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr *ngFor="let conflitoFacilitador of facilitadorList">-->
+                    <tr>
+                        <td>val 1</td>
+                        <td>val 2</td>
+                        <td>val 3</td>
+                        <td>val 4</td>
+                        <td class="text-right">
+                            <a class="btn btn-default btn-xs"><span class="fa fa-pencil"></span></a>
+                            <a class="btn btn-default btn-xs"><span class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </span>
+        </div>
+                      <div class="botoes text-center" style="background: none; border:none">
+                      
+                <a class="btn btn-success">Salvar</a>
+                <a class="btn btn-blue">Editar</a>
+                <a class="btn btn-danger">Cancelar</a>
+            </div>
+    </div>
+            </div> 

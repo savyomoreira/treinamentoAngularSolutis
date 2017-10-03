@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 //import com.smoreira.spread.models.domain.User;
 
 @RestController
-@RequestMapping("/v1/permission")
+@RequestMapping("/v1/permissao")
 public class PermissionController {
 
     @Autowired
@@ -44,13 +44,13 @@ public class PermissionController {
     }
 
     @PostMapping
-    public ResponseEntity<?> save(Permission permission){
+    public ResponseEntity<?> save(@RequestBody Permission permission){
         permissionRepository.save(permission);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @DeleteMapping
-    public ResponseEntity<?> delete(Long permissionId){
+    public ResponseEntity<?> delete(@RequestBody Long permissionId){
         permissionRepository.delete(permissionId);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

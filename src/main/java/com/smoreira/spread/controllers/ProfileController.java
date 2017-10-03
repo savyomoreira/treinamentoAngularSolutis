@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/v1/perfil")
+@Transactional
 public class ProfileController {
 
     @Autowired
@@ -42,13 +44,13 @@ public class ProfileController {
     }
 
     @PostMapping
-    public ResponseEntity<?> save(AccessProfile profile){
+    public ResponseEntity<?> save(@RequestBody AccessProfile profile){
         profileRepository.save(profile);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @DeleteMapping
-    public ResponseEntity<?> delete(Long profileId){
+    @DeleteMapping({"profileId"})
+    public ResponseEntity<?> delete(@PathVariable Long profileId){
         profileRepository.delete(profileId);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

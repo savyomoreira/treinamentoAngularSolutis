@@ -1,0 +1,29 @@
+<form #formModalNovo name="formModalNovo" *ngIf="rendered" >
+    <div class="modal fade timeline-modal" #modalNovo id="modalPermission" data-backdrop="static" style="overflow-y: scroll;"
+     role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Selecionar Permissões</h4>
+          </div>
+          <div class="modal-body">
+            <fieldset class="form-group" style="padding: 15px">
+              <div class="row">
+                <span class="col-md-12 form-group">
+              <label>Unidade</label>
+                <input  maxlength="200"  name="unidade-bairro" class="form-control"/>
+              </span>
+              </div>
+            </fieldset>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" ><span class="fa fa-floppy-o"></span> Confirmar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" ><span class="fa fa-ban"></span> Cancelar</button>
+            <a #closeBtn data-dismiss="modal"></a>
+            <a #openBtn data-toggle="modal" data-target="#modalPermission"></a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </form>

@@ -1,0 +1,25 @@
+
+<div class="content-wrap" >
+    <div class="content">
+        
+        <div class="centralizar box">
+                  <legend>Cadatro de Perfis</legend>
+                  <div class="row">
+                        <span class="col-md-6 form-group">
+                            <label>Nome Perfil<span style="color: red">*</span></label>
+                            <input [(ngModel)] = "perfil.nomePerfil" maxlength="50" name="unidade-endereco" class="form-control"/>
+                        </span>
+    
+                        <span class="col-md-6 form-group">
+                            <label>Descrição<span style="color: red">*</span></label>
+                            <input  [(ngModel)] = "perfil.descricao" maxlength="200"  name="unidade-bairro" class="form-control"/>
+                         </span>
+                  </div>
+                  <app-lista-permissoes (eventdelete)="remover($event)" #listPerfis></app-lista-permissoes>
+             <div class="botoes text-center" style="background: none; border:none">
+                      
+                <a class="btn btn-success" (click)="save()">Salvar</a>
+                <a class="btn btn-danger">Cancelar</a>
+            </div>
+    </div>
+</div> 

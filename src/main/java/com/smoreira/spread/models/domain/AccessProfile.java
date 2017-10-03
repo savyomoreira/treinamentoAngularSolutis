@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+//
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Entity
 @Table(name="PERFIL")
 public class AccessProfile {
@@ -21,6 +21,9 @@ public class AccessProfile {
 
     @Column(name = "NOME_PERFIL")
     private String nomePerfil;
+
+    @Column(name = "DESCRICAO_PERFIL")
+    private String descricao;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "PERMISSION_PERFIL",
@@ -34,5 +37,40 @@ public class AccessProfile {
 
     public AccessProfile(String nomePerfil) {
         this.nomePerfil = nomePerfil;
+    }
+
+    public AccessProfile() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomePerfil() {
+        return nomePerfil;
+    }
+
+    public void setNomePerfil(String nomePerfil) {
+        this.nomePerfil = nomePerfil;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public List<Permission> getPermissionList() {
+        return permissionList;
+    }
+
+    public void setPermissionList(List<Permission> permissionList) {
+        this.permissionList = permissionList;
     }
 }
