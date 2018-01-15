@@ -1,3 +1,5 @@
+#treinamentoAngularSolutis
+
 Código desenvolvido para ser utilizado no treinamento de Angular4 ministrado na Solutis em 10/2017.
 
 Tecnologias utilizadas:
